@@ -1,0 +1,37 @@
+RelativeLayout:
+    canvas.before:
+        Color:
+            rgba:0,1,1,1
+        BorderImage:
+            source:"./login.jpg"
+            pos:self.pos
+            size:self.size
+    Label:
+        pos:(self.parent.width/2-self.width/2,self.parent.height/2+self.height)
+        size_hint:.1,.1
+        text:'User Login'
+        valign:'middle'
+        font_size:self.width/2
+    GridLayout:
+        canvas.before:
+            Color:
+                rgba:0,1,1,0.5
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        pos:(self.parent.width/2-self.width/2,self.parent.height/3)
+        size_hint:.4,.2
+        cols:3
+        rows:2
+        padding:20
+        spacing:10
+        Label:
+            text:"Username"
+            font_size:self.width/4.5
+        TextInput:
+        Button:
+            text:"Login"
+        Label:
+            text:"Password"
+            font_size:self.width/4.5
+        TextInput:
